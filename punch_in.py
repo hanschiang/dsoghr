@@ -6,7 +6,7 @@ import datetime
 print "人事資料登錄"
 print "\n"
 
-staff_list = {"5001": "OB", "5002": "Hs", "5003": "Ks", "5004": "Rb", "5005": "pt"}
+staff_list = {"5001": "An", "5002": "Apple", "5003": "A", "5004": "Day"}
 
 # 待研究這段的意思，隨便Google找來的code，還沒弄懂就先用了。為了讓員工名單照工號順序print。
 for staff_number, staff_name in sorted(staff_list.iteritems()):
