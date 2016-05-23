@@ -1,4 +1,6 @@
-mport time
+# -*- coding: utf-8 -*-
+
+import time
 import datetime
 
 print "人事資料登錄"
