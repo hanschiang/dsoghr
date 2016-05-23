@@ -4,6 +4,7 @@ import time
 import datetime
 
 print "人事資料登錄"
+print "\n"
 
 staff_list = {"5001": "OB", "5002": "Hs", "5003": "Ks", "5004": "Rb", "5005": "pt"}
 
@@ -11,19 +12,23 @@ staff_list = {"5001": "OB", "5002": "Hs", "5003": "Ks", "5004": "Rb", "5005": "p
 for staff_number, staff_name in sorted(staff_list.iteritems()):
     print staff_number, staff_name
 
+print "\n"
 
 staff_number = raw_input("請輸入員工編號> ")
+print "\n"
 
 in_or_out = int(raw_input("上班，請輸入 1 。下班，請輸入 2 > "))
+print "\n"
+
 
 punch_in_or_out = {1: "上班", 2: "下班"}
-
 
 
 time_in_sec = time.time()
 time_and_date = datetime.datetime.fromtimestamp(time_in_sec).strftime('%Y/%m/%d, %H:%M:%S')
 
-print punch_in_or_out[in_or_out], time_and_date
+print staff_list[staff_number], punch_in_or_out[in_or_out], time_and_date
+print "\n"
 
 # 待研究這段的意思，隨便Google找來的code，還沒弄懂就先用了。指知道是找到最後的字元？
 target = open("staff_punch_in_record", 'r+')
