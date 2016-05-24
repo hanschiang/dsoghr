@@ -3,9 +3,9 @@ import time
 import datetime
 import subprocess
 
-# 工號姓名對照
-staff_list = {"1": "An", "2": "Apple", "3": "A", "4": "Day", "6": "Keeps", "7": "Doctor", "8": "Away"}
-
+# 匯入工號姓名表
+import staff_list_file
+staff_list = staff_list_file.staff_list
 
 punch_in_or_out = {1: "上班", 2: "下班"}
 
