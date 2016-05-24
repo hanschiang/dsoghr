@@ -61,7 +61,9 @@ def staff_input():
                 print "請確認輸入資料："
                 
                 print "\n"
-                print bcolors.WARNING + staff_list[staff_number], punch_in_or_out[int_in_or_out], time_and_date + bcolors.ENDC
+                print bcolors.WARNING + staff_list[staff_number] + bcolors.ENDC
+                print bcolors.WARNING + time_and_date + bcolors.ENDC
+                print bcolors.WARNING + punch_in_or_out[int_in_or_out] + bcolors.ENDC
                 print "\n"
         
                 manual_check_input_data = raw_input("確認資料正確？(y/n)")
