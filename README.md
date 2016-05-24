@@ -1,1 +1,6 @@
-# A simple puch in/out program
+# 一個簡單的打卡系統
+
+適用範圍：10~30人的小公司。
+
+
+
