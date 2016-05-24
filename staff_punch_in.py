@@ -32,7 +32,7 @@ def staff_input():
         print bcolors.WARNING + "人事資料登錄" + bcolors.ENDC
         raw_input()
 
-    # 讓員工名單照工號順序print。待研究這段的意思，隨便Google找來的code，還沒弄懂就先用了。    
+    # 讓員工名單照工號順序print。待研究這段的意思，Google找來的code，還沒弄懂就先用了。    
         for staff_number, staff_name in sorted(staff_list.iteritems()):
             print staff_number, staff_name
 
@@ -76,7 +76,7 @@ def staff_input():
             else:
                 print "輸入完成，謝謝您，祝您有愉快的一天。"
                 
-                # 找到最後的字元？待研究這段的意思，隨便Google找來的code，還沒弄懂就先用了。
+                # 找到最後的字元？待研究這段的意思，Google找來的code，還沒弄懂就先用了。
                 target = open("staff_punch_in_record", 'r+')
                 target.seek(-2, 2)
                 if target.read(2) == '\n\n':
