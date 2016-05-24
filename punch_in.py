@@ -41,7 +41,6 @@ while sys_activated == True:
     print "\n"
 
     staff_number = raw_input("請輸入員工編號> ")
-    print staff_number, staff_list[staff_number]
     check_staff_number = raw_input("請確認資料正確")
 
     if staff_number in staff_list:
