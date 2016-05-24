@@ -30,11 +30,15 @@ def staff_input():
         print "\n"
 
         print bcolors.WARNING + "人事資料登錄" + bcolors.ENDC
-        raw_input()
-
-    # 讓員工名單照工號順序print。待研究這段的意思，Google找來的code，還沒弄懂就先用了。    
-        for staff_number, staff_name in sorted(staff_list.iteritems()):
-            print staff_number, staff_name
+        print "\n"
+        
+        # 讓員工名單照姓名順序print。待研究這段的意思，Google找來的code，還沒弄懂就先用了。    
+        print "姓名", "\t", "工號"
+        
+        # 把工號姓名的字典 key/value 反過來
+        staff_list_reversed = dict((y,x) for x,y in staff_list.iteritems())
+        for staff_name, staff_number in sorted(staff_list_reversed.iteritems()):
+            print staff_name, "\t", staff_number
 
         print "\n"
 
@@ -55,7 +59,7 @@ def staff_input():
 
                 # 產生時間戳記
                 time_in_sec = time.time()
-                time_and_date = datetime.datetime.fromtimestamp(time_in_sec).strftime('%Y/%m/%d, %H:%M:%S')
+                time_and_date = datetime.datetime.fromtimestamp(time_in_sec).strftime('%Y/%m/%d, %H:%M')
 
                 # print打卡結果給員工看到
                 print "請確認輸入資料："
