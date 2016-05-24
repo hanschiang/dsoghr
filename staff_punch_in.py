@@ -4,7 +4,7 @@ import datetime
 import subprocess
 
 # 工號姓名對照
-staff_list = {"1": "An", "2": "Apple", "3": "A", "4": "Day"}
+staff_list = {"1": "An", "2": "Apple", "3": "A", "4": "Day", "6": "Keeps", "7": "Doctor", "8": "Away"}
 
 
 punch_in_or_out = {1: "上班", 2: "下班"}
@@ -45,7 +45,7 @@ def staff_input():
             in_or_out = int(raw_input("1，上班。2，下班。請輸入> "))
             print "\n"
             
-            while in_or_out != 1 and in_or_out != 2:
+            if in_or_out != 1 and in_or_out != 2:
                 print bcolors.WARNING + "資料有誤，請重新輸入。" + bcolors.ENDC
                 raw_input()
                 manual_check_input_data = "n"
@@ -67,13 +67,13 @@ def staff_input():
 
 
         
-            while manual_check_input_data != "y":
+            if manual_check_input_data != "y":
                 print bcolors.WARNING + "資料有誤，請重新輸入。" + bcolors.ENDC
                 raw_input()
                 break
             else:
-                print "謝謝您，祝您有愉快的一天。"
-                raw_input()
+                print "輸入完成，謝謝您，祝您有愉快的一天。"
+                
                 # 找到最後的字元？待研究這段的意思，隨便Google找來的code，還沒弄懂就先用了。
                 target = open("staff_punch_in_record", 'r+')
                 target.seek(-2, 2)
@@ -90,10 +90,12 @@ def staff_input():
                 target.write(time_and_date)
                 target.write('\n')
                 target.close()
+                
+                raw_input()
 
         else:
             print bcolors.WARNING + "編號錯誤。請輸入正確的員工編號。" + bcolors.ENDC
-            raw_input("")
+            raw_input()
 
 while staff == True:
     staff_input()
