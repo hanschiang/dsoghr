@@ -31,8 +31,6 @@ def staff_input():
         print "\n"
 
         print bcolors.WARNING + "人事資料登錄" + bcolors.ENDC
-        print "\n"
-
         raw_input()
 
     # 讓員工名單照工號順序print。待研究這段的意思，隨便Google找來的code，還沒弄懂就先用了。    
